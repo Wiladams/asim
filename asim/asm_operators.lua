@@ -4,11 +4,10 @@ local bnot, bxor = bit.bnot, bit.bxor
 
 local DEGREES, RADIANS = math.deg, math.rad
 
-local ps_common = require("lj2ps.ps_common")
-local Stack = require("lj2ps.ps_stack")
-local Array = require("lj2ps.array")
-local Dictionary = require("lj2ps.dictionary")
-local PSString = require("lj2ps.ps_string")
+local ps_common = require("asim.asm_common")
+local Stack = require("asim.asm_stack")
+local Array = require("asim.asm_array")
+local PSString = require("asim.asm_string")
 
 
 
@@ -241,13 +240,17 @@ end
 exports.ceiling = ceiling
 
 local function floor(vm)
-    vm.OperandStack:push(math.floor(vm.OperandStack:pop()))
+    local value = vm.OperandStack:pop()
+    value = math.floor(value)
+    vm.OperandStack:push(value)
+
     return true
 end
 exports.floor = floor
 
 local function neg(vm)
     vm.OperandStack:push(-(vm.OperandStack:pop()))
+    
     return true
 end
 exports.neg = neg
@@ -277,7 +280,10 @@ end
 exports.truncate = truncate
 
 local function sqrt(vm)
-    vm.OperandStack:push(math.floor(vm.OperandStack:pop()))
+    local val = vm.OperandStack:pop()
+    val = math.sqrt(val)
+    vm.OperandStack:push(val)
+    
     return true
 end
 exports.sqrt = sqrt

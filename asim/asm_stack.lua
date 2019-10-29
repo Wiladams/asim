@@ -1,4 +1,4 @@
-local ps_common = require("lj2ps.ps_common")
+local ps_common = require("asim.asm_common")
 
 --[[
 	Stack

@@ -1,4 +1,4 @@
-local enum = require("lj2ps.enum")
+local enum = require("asim.enum")
 
 --[[
 Use TokenType to both indicate a kind of character

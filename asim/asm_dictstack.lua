@@ -9,8 +9,8 @@
     Setting a value somewhere in the stack
 ]]
 
-local ps_common = require("lj2ps.ps_common")
-local Stack = require("lj2ps.ps_stack")
+local ps_common = require("asim.asm_common")
+local Stack = require("asim.asm_stack")
 
 
 local DictionaryStack = {}

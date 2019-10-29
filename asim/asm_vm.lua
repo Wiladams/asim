@@ -14,20 +14,19 @@
     virtual machine.
 ]]
 
-local ps_common = require("lj2ps.ps_common")
+local ps_common = require("asim.asm_common")
 local TokenType = ps_common.TokenType
 local Token = ps_common.Token
 
-local ops = require("lj2ps.ps_operators")
-local gops = require("lj2ps.ps_graph_operators")
-local fops = require("lj2ps.ps_operators_file")
+local ops = require("asim.asm_operators")
+local fops = require("asim.asm_operators_file")
 
-local Stack = require("lj2ps.ps_stack")
-local DictionaryStack = require("lj2ps.ps_dictstack")
+local Stack = require("asim.asm_stack")
+local DictionaryStack = require("asim.asm_dictstack")
 
-local Blend2DDriver = require("lj2ps.b2ddriver")
-local Scanner = require("lj2ps.ps_scanner")
-local octetstream = require("lj2ps.octetstream")
+--local Blend2DDriver = require("lj2ps.b2ddriver")
+local Scanner = require("asim.asm_scanner")
+local octetstream = require("asim.octetstream")
 
 
 local PSVM = {}
@@ -77,10 +76,10 @@ function PSVM.new(self, obj)
     obj.buildProcDepth = 0
     obj.OperandStack = obj.OperandStack or Stack()
     obj.ExecutionStack = obj.ExecutionStack or Stack()
-    obj.DictionaryStack = obj.DictionaryStack or DictionaryStack()
-    obj.GraphicsStack = obj.GraphicsStack or Stack()
-    obj.ClippingPathStack = obj.ClippingPathStack or Stack()
-    obj.Driver = obj.Driver or Blend2DDriver({dpi=obj.dpi or 192, VM = obj})
+    --obj.DictionaryStack = obj.DictionaryStack or DictionaryStack()
+    --obj.GraphicsStack = obj.GraphicsStack or Stack()
+    --obj.ClippingPathStack = obj.ClippingPathStack or Stack()
+    --obj.Driver = obj.Driver or Blend2DDriver({dpi=obj.dpi or 192, VM = obj})
     
     setmetatable(obj, PSVM_mt)
 
@@ -89,10 +88,8 @@ function PSVM.new(self, obj)
     ops["false"] = false
     ops["QUIET"] = true
 
-    -- obj.systemdict = {}
     -- stuff all the operators into the systemdict
     obj.DictionaryStack:pushDictionary(ops)     -- systemdict, should contain system operators
-    obj.DictionaryStack:pushDictionary(gops)     -- graphics operators
     obj.DictionaryStack:pushDictionary(fops)    -- file operators
 
     obj.userdict = {}
