@@ -317,6 +317,10 @@ static int handle_script(lua_State *L, char **argv, int n)
   fname = argv[n];
   if (strcmp(fname, "-") == 0 && strcmp(argv[n-1], "--") != 0)
     fname = NULL;  /* stdin */
+  
+  // run startup
+  return dostring(L, startupScript, "=");
+/*
   status = luaL_loadfile(L, fname);
   lua_insert(L, -(narg+1));
   if (status == 0)
@@ -324,6 +328,7 @@ static int handle_script(lua_State *L, char **argv, int n)
   else
     lua_pop(L, narg);
   return report(L, status);
+*/
 }
 
 /* Load add-on module. */
@@ -625,12 +630,12 @@ static int pmain(lua_State *L)
       return 0;
 
     // run startup
-    dostring(L, startupScript, "=");
+    //dostring(L, startupScript, "=");
   }
 
   if ((flags & FLAGS_INTERACTIVE)) {
     print_jit_status(L);
-    dotty(L);
+    //dotty(L);
   } else if (script == 0 && !(flags & (FLAGS_EXEC|FLAGS_VERSION))) {
     if (lua_stdin_is_tty()) {
       print_version();
