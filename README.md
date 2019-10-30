@@ -42,7 +42,7 @@ Even More Stack Operators
     * pstack
     * =
     * ==
-    
+
 Math Operators
 --------------
     * abs
@@ -80,11 +80,12 @@ Boolean Operators
     * le
 
 Boolean and bitwise Operators
-    * and
-    * or
-    * not
-    * xor
-    * bitshift
+-----------------------------
+* and
+* or
+* not
+* xor
+* bitshift
 
 Control Operators
 -----------------
