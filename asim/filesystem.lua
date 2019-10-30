@@ -4,10 +4,10 @@ local C = ffi.C
 local bit = require("bit");
 local band, bor = bit.band, bit.bor;
 
-local win32 = require("asim.win32")
-local ps_common = require("asim.asm_common")
-local Stack = require("asim.asm_stack")
-local unicode = require("asim.unicode_util")
+local win32 = require("win32")
+local ps_common = require("asm_common")
+local Stack = require("asm_stack")
+local unicode = require("unicode_util")
 
 
 ffi.cdef[[

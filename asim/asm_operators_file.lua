@@ -1,9 +1,9 @@
 --[[
     Operators related to files
 ]]
-local octetstream = require("asim.octetstream")
-local ps_common = require("asim.asm_common")
-local Scanner = require("asim.asm_scanner")
+local octetstream = require("octetstream")
+local ps_common = require("asm_common")
+local Scanner = require("asm_scanner")
 
 local exports = {}
 

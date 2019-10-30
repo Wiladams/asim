@@ -1,6 +1,6 @@
 package.path = "../?.lua;"..package.path
 
-local PSVM = require("asim.asm_vm")
+local PSVM = require("asm_vm")
 local vm = PSVM();              -- Create postscript virtual machine
 
 local function runPrompt()

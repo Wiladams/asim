@@ -1,4 +1,4 @@
-local ps_common = require("asim.asm_common")
+local ps_common = require("asm_common")
 
 --[[
 	Stack

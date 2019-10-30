@@ -1,13 +1,21 @@
+--[[
+    This file implements the core set of operators required
+    for ASIM to work.  Aside the from functions of the VM itself,
+    these operators form the building blocks for other operators 
+    to be built.
+
+
+--]]
 local bit = require("bit")
 local band, bor = bit.band, bit.bor
 local bnot, bxor = bit.bnot, bit.bxor
 
 local DEGREES, RADIANS = math.deg, math.rad
 
-local ps_common = require("asim.asm_common")
-local Stack = require("asim.asm_stack")
-local Array = require("asim.asm_array")
-local PSString = require("asim.asm_string")
+local ps_common = require("asm_common")
+local Stack = require("asm_stack")
+local Array = require("asm_array")
+local PSString = require("asm_string")
 
 
 
@@ -283,7 +291,7 @@ local function sqrt(vm)
     local val = vm.OperandStack:pop()
     val = math.sqrt(val)
     vm.OperandStack:push(val)
-    
+
     return true
 end
 exports.sqrt = sqrt

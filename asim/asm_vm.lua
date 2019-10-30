@@ -14,19 +14,19 @@
     virtual machine.
 ]]
 
-local ps_common = require("asim.asm_common")
+local ps_common = require("asm_common")
 local TokenType = ps_common.TokenType
 local Token = ps_common.Token
 
-local ops = require("asim.asm_operators")
-local fops = require("asim.asm_operators_file")
+local ops = require("asm_operators")
+local fops = require("asm_operators_file")
 
-local Stack = require("asim.asm_stack")
-local DictionaryStack = require("asim.asm_dictstack")
+local Stack = require("asm_stack")
+local DictionaryStack = require("asm_dictstack")
 
 --local Blend2DDriver = require("lj2ps.b2ddriver")
-local Scanner = require("asim.asm_scanner")
-local octetstream = require("asim.octetstream")
+local Scanner = require("asm_scanner")
+local octetstream = require("octetstream")
 
 
 local PSVM = {}

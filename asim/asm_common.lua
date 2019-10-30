@@ -1,4 +1,4 @@
-local enum = require("asim.enum")
+local enum = require("enum")
 
 --[[
 Use TokenType to both indicate a kind of character

@@ -1,7 +1,7 @@
 local ffi = require("ffi")
 
-local ps_common = require("asim.asm_common")
-local PSString = require("asim.asm_string")
+local ps_common = require("asm_common")
+local PSString = require("asm_string")
 
 local Token = ps_common.Token;
 local TokenType = ps_common.TokenType;
