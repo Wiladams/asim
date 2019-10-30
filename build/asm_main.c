@@ -47,10 +47,6 @@ while true do                   \
 end";
 
 
-   
-
-
-
 #if !LJ_TARGET_CONSOLE
 static void lstop(lua_State *L, lua_Debug *ar)
 {
@@ -70,13 +66,6 @@ static void laction(int i)
 }
 #endif
 
-static void print_usage(void)
-{
-  fprintf(stderr,
-  "usage: %s [options]... [script [args]...].\n"
-  "Available options are:\n",progname);
-  fflush(stderr);
-}
 
 static void l_message(const char *pname, const char *msg)
 {
@@ -137,6 +126,7 @@ static void print_version(void)
 static int dostring(lua_State *L, const char *s, const char *name)
 {
   int status = luaL_loadbuffer(L, s, strlen(s), name) || docall(L, 0, 1);
+
   return report(L, status);
 }
 
