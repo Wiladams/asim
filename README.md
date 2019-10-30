@@ -17,7 +17,7 @@ One of the core components of the runtime is the runtime stack.  When you type a
 a <space> the number is placed on the runtime stack.  In fact, all values you type are first placed on 
 the stack before the interpreter does anything with them.
 
-Stack Operators
+Primary Stack Operators
 ---------------
     * clear   - clear the entire stack
     * dup     - duplicate the value on the top of the stack
@@ -26,6 +26,88 @@ Stack Operators
     * push    - put a value onto the top of the stack
     * roll    - rotate values within the stack
     * top     - return value at the top of the stack without removing it
+
+More Stack Operators
+--------------------
+
+    * cleartomark
+    * count
+    * counttomark
+    * copy
+    * mark
+
+Even More Stack Operators
+--------------
+    * stack
+    * pstack
+    * =
+    * ==
+    
+Math Operators
+--------------
+    * abs
+    * add
+    * atan
+    * ceiling
+    * cos
+    * div
+    * exp
+    * floor
+    * idiv
+    * ln
+    * log
+    * mul
+    * mod
+    * max
+    * min
+    * neg
+    * rand
+    * round
+    * rrand
+    * sin
+    * sqrt
+    * srand
+    * sub
+    * truncate
+
+Boolean Operators
+-----------------
+    * eq
+    * ne
+    * gt
+    * ge
+    * lt
+    * le
+
+Boolean and bitwise Operators
+    * and
+    * or
+    * not
+    * xor
+    * bitshift
+
+Control Operators
+-----------------
+    * if
+    * ifelse
+    * for
+    * repeat
+    * loop
+    * forall
+    * exit
+    * stopped
+
+Data Conversion Operators
+-------------------------
+    * cvx
+    * cvi
+    * cvr
+    * cvn
+    * cvs
+    * cvrs
+
+
+
 
 
 A byproduct of the lj2ps (Postscript interpreter using LuaJIT and blend2d) project, this is the standalone interpreter without the graphics operators.
