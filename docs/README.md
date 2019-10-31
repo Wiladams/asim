@@ -29,10 +29,10 @@ take two operands off the stack (2, 1), and add them together, putting the resul
 [Index of Operators](https://github.com/Wiladams/asim/blob/master/docs/operator_index.md)
 
 
-Some usefule reference material
+Some useful reference material
 ===============================
 The first few pages of the following summary are relevant
-* [Mathematical Illustrations - Appendix A](http://www.math.ubc.ca/~cass/graphics/manual/pdf/a1.pdf)
+* [Mathematical Illustrations - Appendix 1](http://www.math.ubc.ca/~cass/graphics/manual/pdf/a1.pdf)
 
 The explanation of execution model here is relevant
 * [A First Guide to Postscript](http://www.tailrecursive.org/postscript/postscript.html)
