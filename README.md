@@ -1,18 +1,26 @@
 # asim
-A Stack Intensive Machine
+A Stack Intensive Machine, A SImple Machine, Algorithm SIMulator
 
-A SImple Machine
+ASIM is a simple runtime environment that implements a stack based machine.  The runtime includes an embedded interpreter which uses reverse polish notation to put items on the stack and execute them.  
+The thing is written in LuaJIT, which is compiled to a self contained executable.  The operator keywords, and program constructs derive from the Postscript language.  As such, referring to Postscript documentation (some listed at bottom of this README) will be helpful in understanding how the environment operates.
 
-ASIM is a simple runtime environment that implements a stack based machine.  The runtime includes an embedded interpreter which uses reverse polish notation to put items on the stack and execute them.  The operator keywords, and program constructs derive from the Postscript language.  As such, referring to Postscript documentation will be helpful in understanding how the environment operates.
 The base runtime does not include the graphics operators that are in the Postscript language, but
-it includes most other operators, including the file operators.
+it includes most other operators, including the file operators.  There is a separate project (lj2ps)
+which contains robust support for Postscript graphics, using blend2d as a graphics backend.
 
 Getting Started
 ===============
 At present, the /build directory contains a binary for Windows (asim.exe).  Download this
-and put it somewhere accessbile from the command line.
+and put it somewhere accessbile from the command line.  
 
-To execute, simply call asim and you'll see a prompt
+Building your own
+-----------------
+You can build this yourself, assuming you 
+have an instance of luajit already on your machine.  The build directory has a 'msvcbuild.bat' file.
+Simply call this from the command line and you'll be left with your own copy of asm.exe.  The included lua51.lib is built for 64-bit applications, so if you want 32-bit, simply replace this with
+a 32-bit version and you're good to go.
+
+To execute, simply call asim.exe and you'll see a prompt
 
 ```
 asim
