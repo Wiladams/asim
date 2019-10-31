@@ -3,7 +3,7 @@ What is asim?
 =============
 asim is a programming language inspired by the Postscript page description language.  Postscript 
 itself was inspired by Forth, and Lisp like languages.  By modern standards it might be a bit
-quirky.  asim uses uses a stack based machine, and reverse polish notation.  The language and 
+quirky.  asim is a stack based machine, and uses reverse polish notation when tokenizing.  The language and 
 runtime are meant to be easy to learn, and easy to implement by those who are relatively new 
 to the challenges of creating language runtimes.
 
