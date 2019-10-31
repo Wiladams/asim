@@ -7,16 +7,34 @@ ASIM is a simple runtime environment that implements a stack based machine.  The
 The base runtime does not include the graphics operators that are in the Postscript language, but
 it includes most other operators, including the file operators.
 
-What does it look like?
+Getting Started
+===============
+At present, the /build directory contains a binary for Windows (asim.exe).  Download this
+and put it somewhere accessbile from the command line.
+
+To execute, simply call asim and you'll see a prompt
+
+```
+asim
+==>
+```
+
+From there, you can start trying out simple commands.
+
 
 ```Postscript
-> 1 2 add ==
+==> 1 2 add ==
 3
 ```
 
-The environment can be extended by creating new operators, procedures, and datatypes.  The built in operators are grouped by the types they affect
+In the very near future, you'll be able to feed it a complete program from a file, but
+for now, the interactive mode is there.
+
+The environment can be extended by creating new operators, procedures, and datatypes.
 
 One of the core components of the runtime is the runtime stack.  The embedded scanner tokenizes your input, placing appropriate items on the stack for further processing.  when an executable operator is identified, it is executed immediately.
+
+The following is a list of the built in operators, grouped the types they affect.
 
 Primary Stack Operators
 ---------------
@@ -31,18 +49,18 @@ Primary Stack Operators
 More Stack Operators
 --------------------
 
-* cleartomark
-* count
-* counttomark
-* copy
-* mark
+* cleartomark   - clear entries in the stack up to a mark
+* count         - count how many entries are on the stack
+* counttomark   - count up to a mark on the stack
+* copy          - copy a specified number of entries on the stack
+* mark          - place a mark on the stack
 
 Even More Stack Operators
 --------------
-* stack
-* pstack
-* =
-* ==
+* stack         - print the current stack (non-destructive)
+* pstack        - print the current stack (non-destructive)
+* =             - pop top stack item and print
+* ==            - pop top stack item and print
 
 Math Operators
 --------------
@@ -73,12 +91,12 @@ Math Operators
 
 Boolean Operators
 -----------------
-* eq
-* ne
-* gt
-* ge
-* lt
-* le
+* eq            - compare top two items on stack and place bool value on top of stack
+* ne            - compare top two items on stack
+* gt            - compare top two items on stack
+* ge            - compare top two items on stack
+* lt            - compare top two items on stack
+* le            - compare top two items on stack
 
 Boolean and bitwise Operators
 -----------------------------
@@ -115,7 +133,8 @@ Data Conversion Operators
 References
 ==========
 The first few pages of the following summary are relevant
-http://www.math.ubc.ca/~cass/graphics/manual/pdf/a1.pdf
+* http://www.math.ubc.ca/~cass/graphics/manual/pdf/a1.pdf
 
-http://www.tailrecursive.org/postscript/postscript.html
+The explanation of execution model here is relevant
+* http://www.tailrecursive.org/postscript/postscript.html
 
