@@ -26,7 +26,7 @@ operator name will be found, and the associated function will be called.  The 'a
 take two operands off the stack (2, 1), and add them together, putting the result back on the stack
 (3).
 
-[Index of Operators](https://github.com/Wiladams/asim/docs/operator_index.md)
+[Index of Operators](https://github.com/Wiladams/asim/blob/master/docs/operator_index.md)
 
 
 Some usefule reference material

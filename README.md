@@ -50,7 +50,7 @@ Runtime Basics
 ==============
 One of the core components of the runtime is the runtime stack.  The embedded scanner tokenizes your input, placing appropriate items on the stack for further processing.  when an executable operator is identified, it is executed immediately. The environment can be extended by creating new operators, procedures, and data structures.
 
-You Read the [docs](https://github.com/wiladams/asim/docs/README.md) to get an idea of the runtime operators and how to use them to build
+You Read the [docs](https://github.com/Wiladams/asim/tree/master/docs) to get an idea of the runtime operators and how to use them to build
 programs.
 
 
