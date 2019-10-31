@@ -10,8 +10,8 @@ which contains robust support for Postscript graphics, using blend2d as a graphi
 
 Getting Started
 ===============
-At present, the /build directory contains a binary for Windows (asim.exe).  Download this
-and put it somewhere accessbile from the command line.  
+At present, the /build directory contains a binary for Windows [asim.exe](https://github.com/Wiladams/asim/blob/master/build/asim.exe).  Download this
+and put it somewhere accessbile from the command line.  There are no other dependencies or libraries, startup files and the like to be concerned with.
 
 Building your own
 -----------------
