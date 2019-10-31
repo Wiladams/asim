@@ -20,6 +20,8 @@ have an instance of luajit already on your machine.  The build directory has a '
 Simply call this from the command line and you'll be left with your own copy of asm.exe.  The included lua51.lib is built for 64-bit applications, so if you want 32-bit, simply replace this with
 a 32-bit version and you're good to go.
 
+Execute your first program
+--------------------------
 To execute, simply call asim.exe and you'll see a prompt
 
 ```
@@ -35,12 +37,18 @@ From there, you can start trying out simple commands.
 3
 ```
 
-In the very near future, you'll be able to feed it a complete program from a file, but
+Exiting the runtime
+-------------------
+Ctl-C a couple of times, and you're back to the Windows command prompt
+
+Soon enough you'll be able to feed it a complete program from a file, but
 for now, the interactive mode is there.
 
-The environment can be extended by creating new operators, procedures, and datatypes.
 
-One of the core components of the runtime is the runtime stack.  The embedded scanner tokenizes your input, placing appropriate items on the stack for further processing.  when an executable operator is identified, it is executed immediately.
+
+Runtime Basics
+==============
+One of the core components of the runtime is the runtime stack.  The embedded scanner tokenizes your input, placing appropriate items on the stack for further processing.  when an executable operator is identified, it is executed immediately. The environment can be extended by creating new operators, procedures, and data structures.
 
 The following is a list of the built in operators, grouped the types they affect.
 
