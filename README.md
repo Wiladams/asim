@@ -37,12 +37,42 @@ From there, you can start trying out simple commands.
 3
 ```
 
+
 Exiting the runtime
 -------------------
 Ctl-C a couple of times, and you're back to the Windows command prompt
 
-Soon enough you'll be able to feed it a complete program from a file, but
-for now, the interactive mode is there.
+Running a program in a file
+---------------------------
+Typing single lines of code interactively in the interpreter can bring only
+so much joy to your life.  Things are much more fun when you can write more
+extensive multi-line programs.
+
+From the interactive prompt, you can execute code from a file using the 'run' 
+operator.  So, if you typed the following into a file (ex1.ap):
+
+```Postscript
+%!PS
+% usage: 
+%   asim 
+%   ==> (ex1.ap) run
+%
+1 2 add
+pstack
+3 mul
+sqrt
+==
+```
+
+You could then run it with:
+```Postscript
+==> (ex1.ap) run
+```
+
+Never mind what this particular program does, this is the general way to execute
+programs that are inside files.  The name of the file does not matter.  There is 
+no meaning to the '.ap' extension, I just felt like having some extension.
+
 
 
 
