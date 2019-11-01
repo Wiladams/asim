@@ -86,4 +86,6 @@ Note
 
 Postscript is a registered trademark of Adobe Systems Incorporated.  The copyright to the Postscript language is also held by Adobe Systems Incorporated.  This site is not relate to, supported by, or in any way condoned by Adobe in any way.
 
+LICENSE
+=======
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
