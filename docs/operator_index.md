@@ -13,7 +13,6 @@ are popped off the stack, the 'Arguments' will be represented by a single
 Operand Stack Manipulation Operators
 ---------------
 Arguments               Command     Left on stack, side effects<br/>
-
     any(1) ... any(n)   clear       -<br/>
                     a   dup         a a<br/>
                   a b   exch        b a<br/>
@@ -22,8 +21,8 @@ any(n-1)...any(0) n j   roll        any(j-1) modn ... any0 any(n-1)... anyj mod 
 
 Special Cases
 -------------
-* top     - A special case as the language does not allow you to 'peek' at the top of the stack
-* push    - A special case, as the language pushes on the stack implicitly
+Arguments               Command     Left on stack, side effects<br/>
+                  any   top         stack unchanged<br/>
 
 More Stack Operators
 --------------------
