@@ -1,0 +1,11 @@
+%!PS
+% This is a sample file meant for usage
+% by various file operators
+1 2 add
+3 mul
+sqrt
+=
+
+% And what about something more interest
+[(Here) (Is) (an) (array) (of) (strings)]
+%%EOF

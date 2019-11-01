@@ -1,0 +1,6 @@
+% read a token from the input stream 
+
+/sfile (sample.ap) file def
+
+sfile =
+

@@ -56,9 +56,15 @@ So, the "Hello, World!" of ASIM looks like:
 (Hello, World!) =
 ```
 
+Language Reference
+==================
 [Data Types](https://github.com/Wiladams/asim/blob/master/docs/operator_index.md)
 [Index of Operators](https://github.com/Wiladams/asim/blob/master/docs/operator_index.md)
 
+
+Implementation Reference
+========================
+[Implementation Details](https://github.com/Wiladams/asim/blob/master/docs/asim_implementation.md)
 
 Some useful reference material
 ===============================
