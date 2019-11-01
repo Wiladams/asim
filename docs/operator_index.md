@@ -13,12 +13,12 @@ are popped off the stack, the 'Arguments' will be represented by a single
 Operand Stack Manipulation Operators
 ---------------
 <pre>
-Arguments               Command     Left on stack, side effects<br/>
-    any(1) ... any(n)   clear       -<br/>
-                    a   dup         a a<br/>
-                  a b   exch        b a<br/>
-                  any   pop         - <br/>
-any(n-1)...any(0) n j   roll        any(j-1) modn ... any0 any(n-1)... anyj mod n<br/> 
+Arguments               Command     Left on stack, side effects
+    any(1) ... any(n)   clear       -
+                    a   dup         a a
+                  a b   exch        b a
+                  any   pop         - 
+any(n-1)...any(0) n j   roll        any(j-1) modn ... any0 any(n-1)... anyj mod n
 </pre>
 
 Special Cases
