@@ -1,12 +1,12 @@
-# asim
+# ASIM
 A Stack Intensive Machine, A SImple Machine, Algorithm SIMulator
+= =     =         =
 
 ASIM is a simple runtime environment that implements a stack based machine.  The runtime includes an embedded interpreter which uses reverse polish notation to put items on the stack and execute them.  
-The thing is written in LuaJIT, which is compiled to a self contained executable.  The operator keywords, and program constructs derive from the Postscript language.  As such, referring to Postscript documentation (some listed at bottom of this README) will be helpful in understanding how the environment operates.
+The thing is written in LuaJIT, which is compiled to a self contained executable.  The operator keywords, and program constructs derive from the Postscript language.  As such, referring to Postscript documentation will be helpful in understanding how the environment operates.
 
 The base runtime does not include the graphics operators that are in the Postscript language, but
-it includes most other operators, including the file operators.  There is a separate project (lj2ps)
-which contains robust support for Postscript graphics, using blend2d as a graphics backend.
+it includes most other operators, including the file operators.  The [lj2ps](https://github.com/Wiladams/lj2ps) contains robust support for Postscript graphics, using blend2d as a vector graphics backend.
 
 Getting Started
 ===============
@@ -76,11 +76,14 @@ no meaning to the '.ap' extension, I just felt like having some extension.
 
 
 
-Runtime Basics
-==============
-One of the core components of the runtime is the runtime stack.  The embedded scanner tokenizes your input, placing appropriate items on the stack for further processing.  when an executable operator is identified, it is executed immediately. The environment can be extended by creating new operators, procedures, and data structures.
+Documentation
+=============
 
-You Read the [docs](https://github.com/Wiladams/asim/tree/master/docs) to get an idea of the runtime operators and how to use them to build
-programs.
+You can read the [docs](https://github.com/Wiladams/asim/tree/master/docs) to get an idea of the runtime operators and how to use them to build programs.
 
+Note
+====
 
+Postscript is a registered trademark of Adobe Systems Incorporated.  The copyright to the Postscript language is also held by Adobe Systems Incorporated.  This site is not relate to, supported by, or in any way condoned by Adobe in any way.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
