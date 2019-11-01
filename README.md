@@ -79,7 +79,10 @@ no meaning to the '.ap' extension, I just felt like having some extension.
 Documentation
 =============
 
-You can read the [docs](https://github.com/Wiladams/asim/tree/master/docs) to get an idea of the runtime operators and how to use them to build programs.
+The [documentation](https://github.com/Wiladams/asim/tree/master/docs) should give you a
+good idea of the runtime and how the various operators work.  You can also find some examples
+within the [examples](https://github.com/Wiladams/asim/tree/master/examples) directory of the repository.
+
 
 Note
 ====
