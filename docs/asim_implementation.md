@@ -29,12 +29,22 @@ Operators
 
 Runtime
 -------
-* [asm_scanner](https://github.com/Wiladams/asim/blob/master/asim/asm_scanner.lua) - The scanner
-* [asm_vm](https://github.com/Wiladams/asim/blob/master/asim/asm_vm.lua) - the actual execution engine
-* [filesystem](https://github.com/Wiladams/asim/blob/master/asim/filesystem.lua) - file system iteration and access
-* [octetstream](https://github.com/Wiladams/asim/blob/master/asim/octetstream.lua) - An easy byte streaming interface 
+* [asm_scanner](https://github.com/Wiladams/asim/blob/master/asim/asm_scanner.lua) - The scanner takes an input stream
+and turns it into tokens to be consumed by the vm.  The tokenizer is implemented as an iterator, so the vm can
+use it in a pull model.  This simplifies processing, and makes it possible to easily build composite streams of tokens if that
+becomes a desirable feature.
+* [asm_vm](https://github.com/Wiladams/asim/blob/master/asim/asm_vm.lua) - This is the actual interpreter.  Here you will find the
+main control loop that takes tokens from the scanner, puts arguments on the stack, executes operators, and the like.
+
 
 Misc
 ----
+* [octetstream](https://github.com/Wiladams/asim/blob/master/asim/octetstream.lua) - An easy byte streaming interface.  The tokenizer
+uses this to scan one octet at a time.  Can go backward and forward, peek bytes.  Having this gives a common interface to streams of 
+bytes, whether they're in a string, or an array, or in a file.
+
+OS Specific (Windows)
+---------------------
+* [filesystem](https://github.com/Wiladams/asim/blob/master/asim/filesystem.lua) - File system implementation.  Gives access to files, directory iteration, etc.  Specific to the platform we're running on.
 * [unicode_util](https://github.com/Wiladams/asim/blob/master/asim/unicode_util.lua)
 * [win32](https://github.com/Wiladams/asim/blob/master/asim/win32.lua)
