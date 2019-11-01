@@ -37,7 +37,7 @@ of that line.  There is no provision for multi-line comments.
 % More comments may follow, and include any characters
 % including the '%' symbol itself.  All that matters
 1 2 add  % is that the comment goes to the end of the line
-==
+=
 ```
 Some immediately useful operators
 ---------------------------------
@@ -55,13 +55,16 @@ So, the "Hello, World!" of ASIM looks like:
 ```Postscript
 (Hello, World!) =
 ```
- 
+
 [Data Types](https://github.com/Wiladams/asim/blob/master/docs/operator_index.md)
 [Index of Operators](https://github.com/Wiladams/asim/blob/master/docs/operator_index.md)
 
 
 Some useful reference material
 ===============================
+A useful reference to the language
+* [Thinking in Postscript](http://cholla.mmto.org/computers/postscript/tips.pdf)
+
 The first few pages of the following summary are relevant
 * [Mathematical Illustrations - Appendix 1](http://www.math.ubc.ca/~cass/graphics/manual/pdf/a1.pdf)
 
