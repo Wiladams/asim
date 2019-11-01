@@ -1,14 +1,29 @@
-The following is a list of the built in operators, grouped the types they affect.
+The following is a list of the built in operators, grouped the types.
+Operators are functions, or commands, that pull their arguments off the 
+Operand Stack, perform a function, and optionally put some results back
+on the stack.  The terse form of documentation for each operator shows 
+what was on the stack before the operator, and what is left on the stack
+after the operator is executed.
 
-Primary Stack Operators
+For the 'Left on stack' column, if there is nothing added to the stack,
+it is indicated with a singular '-' symbol.  Similarly, if no arguments
+are popped off the stack, the 'Arguments' will be represented by a single
+'-' symbol.
+
+Operand Stack Manipulation Operators
 ---------------
-* clear   - clear the entire stack
-* dup     - duplicate the value on the top of the stack
-* exch    - exchange the two values on the top of the stack
-* pop     - remove the value that is at the top of the stack
-* push    - put a value onto the top of the stack
-* roll    - rotate values within the stack
-* top     - return value at the top of the stack without removing it
+Arguments               Command     Left on stack, side effects
+---------
+any(1) ... any(n)       clear       -
+a                       dup         a a
+a b                     exch        b a
+any                     pop         - 
+any(n-1)...any(0) n j   roll        any(j-1) modn ... any0 any(n-1)... anyj mod n
+
+Special Cases
+-------------
+* top     - A special case as the language does not allow you to 'peek' at the top of the stack
+* push    - A special case, as the language pushes on the stack implicitly
 
 More Stack Operators
 --------------------
