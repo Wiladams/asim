@@ -14,11 +14,11 @@ Operand Stack Manipulation Operators
 ---------------
 <pre>
 Arguments               Command     Left on stack, side effects
-    any(1) ... any(n)   clear       -
-                    a   dup         a a
-                  a b   exch        b a
-                  any   pop         - 
-any(n-1)...any(0) n j   roll        any(j-1) modn ... any0 any(n-1)... anyj mod n
+    any(1) ... any(n)   <strong>clear</strong>       -
+                    a   <strong>dup</strong>         a a
+                  a b   **exch**        b a
+                  any   **pop**         - 
+any(n-1)...any(0) n j   **roll**        any(j-1) modn ... any0 any(n-1)... anyj mod n
 </pre>
 
 Special Cases
