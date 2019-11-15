@@ -29,6 +29,23 @@ local TokenType = enum {
     "COMMENT",          -- % to end of line
 }
 
+--[[
+    kind - STRING, FLOAT, INT, BOOLEAN, NAME, PROCEDURE
+]]
+ffi.cdef[[
+struct ASMValue {
+    uint32_t kind;
+    uint32_t isExecutable;
+    uint32_t length;
+    union {
+        int32_t intValue;
+        float floatValue;
+        void * refValue;
+    };
+};
+]]
+
+
 local Token_mt = {
     __tostring = function(self)
         --print("Token_mt- kind, value: ", self.kind, self.value)
